@@ -24,27 +24,29 @@ class ProbonoApplicationTests {
 	PersonRepository pr;
 
 	@Test
-	public void testSave() {
-		Talent t1 = new Talent();
-		Talent t2 = new Talent();
-		Talent t3 = new Talent();
-		Talent t4 = new Talent();
-		Talent t5 = new Talent();
-        
-		List<Talent> list = new ArrayList<>();
-		List<Talent> list1 = new ArrayList<>();
-		list.add(t1);
-		list.add(t2);
-		list.add(t3);
+	public void personSave() {
 
-		list1.add(t4);
-		list1.add(t5);
+		List<Long> list = new ArrayList<>();
+		List<Long> list1 = new ArrayList<>();
+
+		list.add(1L);
+		list.add(2L);
+		list.add(3L);
+
+		list1.add(4L);
+		list1.add(5L);
 		
-        // Person p = new Person(list);
+		Person p1 = new Person("Lim", "emal@aaa", list, list1);
+		Person p2 = new Person("Kim", "email@bbb", null, list1);
+		Person p3 = new Person("Jang", "email@ccc", list, null);
+		Person p4 = new Person("Lee", "email@ddd", null, list1);
+		Person p5 = new Person("Oh", "email@eee", list, null);
 
-		Person p = new Person("Lim", "emial@ddd", list, list1);
-
-		pr.save(p);
+		pr.save(p1);
+		pr.save(p2);
+		pr.save(p3);
+		pr.save(p4);
+		pr.save(p5);
 		
     }
 
@@ -61,6 +63,31 @@ class ProbonoApplicationTests {
 
 		Talent t3 = new Talent("talent_3");
 		tr.save(t3);
+
 	}
+
+	@Test
+	public void getTalents() {
+
+		List<Talent> list = tr.findAll();
+		
+		for(Talent t : list) {
+			System.out.println(t.getId() + " " + t.getTalentType());
+		}
+	}
+
+	@Test
+	public void getAllBeneficiary() {
+		List<Person> list = pr.findByListBenefitIsNotNull();
+
+		for(Person p : list) {
+			System.out.println(p.getId() + ", " + p.getName() + ", " + p.getListBenefit());
+		}
+	}
+
+	
+
+	
+
 
 }

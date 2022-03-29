@@ -23,17 +23,17 @@ public class Person {
     
     private String email;
 
-    @Convert(converter = Converter.class)
-    private List<Talent> listBenefit;
+    @Convert(converter = PersonConverter.class)
+    private List<Long> listBenefit;
 
-    @Convert(converter = Converter.class)
-    private List<Talent> listDonation;
+    @Convert(converter = PersonConverter.class)
+    private List<Long> listDonation;
 
     public Person(String name) {
         this.name = name;
     }
 
-    public Person(String name, String email, List<Talent> listBenefit, List<Talent> listDonation) {
+    public Person(String name, String email, List<Long> listBenefit, List<Long> listDonation) {
         this.name = name;
         this.email = email;
         this.listBenefit = listBenefit;
@@ -64,20 +64,20 @@ public class Person {
         this.email = email;
     }
 
-    public List<Talent> getListBenefit() {
+    public List<Long> getListBenefit() {
         return listBenefit;
     }
 
-    public void setListBenefit(List<Talent> listBenefit) {
+    public void setListBenefit(List<Long> listBenefit) {
         this.listBenefit = listBenefit;
     }
 
-    public List<Talent> getListDonation() {
+    public List<Long> getListDonation() {
         return listDonation;
     }
 
-    public void setListDonation(List<Talent> listDonation) {
+    public void setListDonation(List<Long> listDonation) {
         this.listDonation = listDonation;
     }
-  
+
 }
