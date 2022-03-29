@@ -4,8 +4,10 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import dev.probono.probono.model.Matching;
 import dev.probono.probono.model.Person;
 import dev.probono.probono.model.Talent;
+import dev.probono.probono.repository.MatchingRepository;
 import dev.probono.probono.repository.PersonRepository;
 import dev.probono.probono.repository.TalentRepository;
 
@@ -23,8 +25,12 @@ class ProbonoApplicationTests {
 	@Autowired
 	PersonRepository pr;
 
+
+	@Autowired
+	MatchingRepository mr;
+
 	@Test
-	public void personSave() {
+	public void savePerson() {
 
 		List<Long> list = new ArrayList<>();
 		List<Long> list1 = new ArrayList<>();
@@ -52,8 +58,9 @@ class ProbonoApplicationTests {
 
 	@Autowired
 	TalentRepository tr;
+
 	@Test
-	public void talentSave() {
+	public void saveTalent() {
 
 		Talent t1 = new Talent("talent_1");
 		tr.save(t1);
@@ -65,29 +72,51 @@ class ProbonoApplicationTests {
 		tr.save(t3);
 
 	}
+	
+	@Test
+	public void saveMatching() {
+		Matching m1 = new Matching(1L, 2L, 1L);
+		mr.save(m1);
+
+		Matching m2 = new Matching(2L, 3L, 2L);
+		mr.save(m2);
+
+		Matching m3 = new Matching(3L, 1L, 3L);
+		mr.save(m3);
+	}
+
 
 	@Test
-	public void getTalents() {
+	public void getAllTalents() {
 
 		List<Talent> list = tr.findAll();
 		
 		for(Talent t : list) {
 			System.out.println(t.getId() + " " + t.getTalentType());
 		}
-	}
+	};
 
 	@Test
-	public void getAllBeneficiary() {
-		List<Person> list = pr.findByListBenefitIsNotNull();
+	public void getAllBeneficiaries() {
+
+		List<Person> list = pr.findByListBenefitNotNull();
 
 		for(Person p : list) {
 			System.out.println(p.getId() + ", " + p.getName() + ", " + p.getListBenefit());
 		}
 	}
 
+	@Test
+	public void getAllDonators() {
+
+		List<Person> list = pr.findByListDonationNotNull();
+
+		for(Person p : list) {
+			System.out.println(p.getId() + ", " + p.getName() + ", " + p.getListDonation().get(0));
+		}
+	}
 	
 
-	
 
 
 }

@@ -19,10 +19,12 @@ public class PersonConverter implements AttributeConverter<List<Long>, String>{
   
     @Override
     public List<Long> convertToEntityAttribute(String dbData) {
+      if(dbData == null) {
+        return null;
+      }
       return Arrays.stream(dbData.split(SPLIT_CHAR))
           .map(Long::parseLong)
           .collect(Collectors.toList());
   
     }
 }
-
