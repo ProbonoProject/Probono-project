@@ -29,6 +29,8 @@ public class Person {
     @Convert(converter = PersonConverter.class)
     private List<Long> listDonation;
 
+    public Person() {}
+
     public Person(String name) {
         this.name = name;
     }
