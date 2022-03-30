@@ -1,26 +1,32 @@
-package dev.probono.probono.model;
+package dev.probono.probono.model.entity;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-public class Matching {
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "MATCHING")
+public class Match {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="PERSON_ID")
+    @Column(name = "MATCHING_ID")
     private Long id;
 
+    @Column
     private Long beneficiaryId;
 
     private Long donatorId;
 
     private Long talentId;
 
-    public Matching() {}
+    public Match() {}
 
-    public Matching(Long beneficiaryId, Long donatorId, Long talentId) {
+    public Match(Long beneficiaryId, Long donatorId, Long talentId) {
         this.beneficiaryId = beneficiaryId;
         this.donatorId = donatorId;
         this.talentId = talentId;
@@ -58,5 +64,6 @@ public class Matching {
         this.talentId = talentId;
     }
 
+    
     
 }

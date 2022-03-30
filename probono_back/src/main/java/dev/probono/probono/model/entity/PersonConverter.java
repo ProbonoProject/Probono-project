@@ -1,4 +1,4 @@
-package dev.probono.probono.model;
+package dev.probono.probono.model.entity;
 
 import java.util.Arrays;
 import java.util.List;

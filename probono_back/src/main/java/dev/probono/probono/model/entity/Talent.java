@@ -1,4 +1,4 @@
-package dev.probono.probono.model;
+package dev.probono.probono.model.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
