@@ -1,13 +1,3 @@
-
-
-
-
-
-
-
-
-
-
 insert into talent(talent_type) values("국어");
 insert into talent(talent_type) values("수학");
 insert into talent(talent_type) values("영어");
