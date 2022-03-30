@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Probono Project</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
+    <script src="slider.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
     <article>
@@ -14,22 +17,107 @@
             <div class="Header">
                 <div class="Header__main">
                     <h1 class="Header__main__logo">
-                        <img src="https://konggames.co.kr/main/img/icon-01.png" alt="probono logo">
+                        <a href="main.html">
+                            <img src="img/probono logo.jpg" alt="probono logo">
+                        </a>
                     </h1>
                     <ul class="Header__main__menu">
-                        <li><a href="">안내</a></li>
-                        <li><a href="">About us</a></li>
-                        <li><a href="">기부</a></li>
+                        <li><a href="#">안내</a>
+                            <ul>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">About us</a>
+                            <ul>
+                                <li><a href="#">임직원 소개</a></li>
+                                <li><a href="#">연혁</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">기부</a>
+                            <ul>
+                                <li><a href="#">기부자 목록 보기</a></li>
+                                <li><a href="#">수혜자 목록 보기</a></li>
+                            </ul>
+                        </li>
                     </ul>
-                </div>  
+                    <div class="Login">
+                        <input id="username" type="text" name="username" placeholder="아이디">
+                        <label for="username">아이디</label>
+                        <input type="submit" value="로그인">
+                    </div>
+                </div>
             </div>
             <hr>
         </header>
-        <section>
-            <div>
 
+        <section>
+            <div class="Section__search">
+                <label for="Section__search__input"></label>
+                <input name="Section__search__input" id="Section__search__input"  list="talentList" placeholder="search">
+                <datalist id="talentList">
+                    <option value="과외" label="과외"></option>
+                    <option value="악기" label="악기"></option>
+                    <option value="운동" label="운동"></option>
+                    <option value="요리" label="요리"></option>
+                </datalist>
+                <a id="Section__search__btn" class="btn btn-3">Hover me</a> 
             </div>
+
+            <div class="Section__slider">
+                <i class="fa-solid fa-circle-arrow-left fa-5x" onclick="plusDivs(-1)"></i>
+                <img class="mySlides" src="img/slider1.jpg" style="width:100%">
+                <img class="mySlides" src="img/slider2.jpg" style="width:100%">
+                <img class="mySlides" src="img/slider3.jpg" style="width:100%">
+                <!-- <a class="w3-btn-floating" style="position:absolute;top:45%;left:0" onclick="plusDivs(-1)">❮</a>
+                <a class="w3-btn-floating" style="position:absolute;top:45%;right:0" onclick="plusDivs(1)">❯</a> -->
+                <i class="fa-solid fa-circle-arrow-right fa-5x" onclick="plusDivs(1)"></i>
+            </div>
+            <script>
+                var slideIndex = 1;
+                showDivs(slideIndex);
+                function plusDivs(n) {
+                  showDivs(slideIndex += n);
+                }
+                function showDivs(n) {
+                  var i;
+                  var x = document.getElementsByClassName("mySlides");
+                  if (n > x.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = x.length} ;
+                  for (i = 0; i < x.length; i++) {
+                     x[i].style.display = "none";  
+                  }
+                  x[slideIndex-1].style.display = "block";  
+                }
+            </script>
+
+            <div class="Section__crowdFundings">
+                <div id="Section__crowdFundings__container">
+                    <a href="https://www.chest.or.kr/ca/crwdfund/P/initCrwdfundDetail.do" target="_blank"><img src="img/crowdFunding1.jpg" alt="Omar"> </a>
+                    <div class="box-text">
+                    <h1>525,000원</h1>
+                    <p>함께 여행가요 
+                    </div>
+                </div>
+                <div id="Section__crowdFundings__container">
+                    <a href="https://www.facebook.com/groups/ElzeroWebSchool/" target="_blank"><img src="img/crowdFunding2.jpg" alt="Omar"> </a>
+                    <div class="box-text">
+                    <h1>1,000,000원</h1>
+                    <p>노인분들에게 식사를!
+                    </div>
+                </div>
+                <div id="Section__crowdFundings__container">
+                    <a href="https://www.facebook.com/groups/ElzeroWebSchool/" target="_blank"><img src="img/crowdFunding3.png" alt="Omar"> </a>
+                    <div class="box-text">
+                    <h1>모금 완료</h1>
+                    <p>모금 후기로 돌아올게요.
+                    </div>
+                </div>
+            </div>
+
         </section>
+
+
         <footer>
             <hr>
             <div class="Footer">
