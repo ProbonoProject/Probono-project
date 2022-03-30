@@ -1,4 +1,4 @@
-package dev.probono.probono.model;
+package dev.probono.probono.model.entity;
 
 import java.util.List;
 
@@ -19,7 +19,6 @@ public class Person {
 
     @Column
     private String name;
-
     
     private String email;
 
@@ -28,6 +27,8 @@ public class Person {
 
     @Convert(converter = PersonConverter.class)
     private List<Long> listDonation;
+
+    public Person() {}
 
     public Person(String name) {
         this.name = name;
