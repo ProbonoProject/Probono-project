@@ -1,7 +1,10 @@
 package dev.probono.probono.service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
+
+import javax.persistence.EntityNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -39,6 +42,22 @@ public class PersonServiceImpl implements PersonService {
     }
 
     @Override
+    public PersonDTO getOnePerson(Long personId) {
+
+        try{
+            Person person = personRepository.getById(personId);
+            PersonDTO result = new PersonDTO(person);
+
+            return result;
+        } catch(EntityNotFoundException e) {
+            e.printStackTrace();
+            System.out.println("올바른 아이디를 입력하세요.");
+            return null;
+        }
+        
+    }
+
+    @Override
     public List<PersonDTO> getAllBeneficiaries() {
 
         List<Person> list = personRepository.findByListBenefitNotNull();
@@ -54,4 +73,5 @@ public class PersonServiceImpl implements PersonService {
         List<PersonDTO> result = list.stream().map(r -> new PersonDTO(r)).collect(Collectors.toList());
         return result;
     }
+
 }
