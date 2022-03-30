@@ -41,22 +41,6 @@ public class PersonServiceImpl implements PersonService {
     }
 
     @Override
-    public PersonDTO getOnePerson(Long personId) {
-
-        try{
-            Person person = personRepository.getById(personId);
-            PersonDTO result = new PersonDTO(person);
-
-            return result;
-        } catch(EntityNotFoundException e) {
-            e.printStackTrace();
-            System.out.println("올바른 아이디를 입력하세요.");
-            return null;
-        }
-        
-    }
-
-    @Override
     public List<PersonDTO> getAllBeneficiaries() {
 
         List<Person> list = personRepository.findByListBenefitNotNull();
@@ -73,4 +57,18 @@ public class PersonServiceImpl implements PersonService {
         return result;
     }
 
+    @Override
+    public PersonDTO getOnePerson(Long personId) {
+
+        try{
+            Person person = personRepository.getById(personId);
+            PersonDTO result = new PersonDTO(person);
+
+            return result;
+        } catch(EntityNotFoundException e) {
+            e.printStackTrace();
+            return null;
+        }
+        
+    }
 }
