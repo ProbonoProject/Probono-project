@@ -10,5 +10,9 @@ public interface PersonRepository extends JpaRepository<Person, Long>{
     
     List<Person> findByListBenefitNotNull();
     List<Person> findByListDonationNotNull();
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 33107db48352687f43808f8844e7e77feda08c2d
 }
