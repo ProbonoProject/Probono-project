@@ -12,6 +12,8 @@ public class PersonDTO {
     private List<Long> listBenefit;
     private List<Long> listDonation;
 
+    
+
     public PersonDTO() {}
 
     public PersonDTO(Person person) {

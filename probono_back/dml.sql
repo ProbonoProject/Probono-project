@@ -8,3 +8,4 @@ insert into talent(talent_type) values("보건 및 의료");
 insert into talent(talent_type) values("무료법률상담");
 insert into talent(talent_type) values("청소년 상담");
 insert into talent(talent_type) values("JAVA 코딩 교육");
+

@@ -5,7 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -17,20 +18,22 @@ public class Match {
     @Column(name = "MATCHING_ID")
     private Long id;
 
-    @Column
-    private Long beneficiaryId;
+    
+    @ManyToOne
+    @JoinColumn(name = "BENEFICIARY_ID")
+    private Person beneficiary;
+    // private Long beneficiaryId;
 
-    private Long donatorId;
+    @ManyToOne
+    @JoinColumn(name = "DONATOR_ID")
+    private Person donator;
+    // private Long donatorId;
 
-    private Long talentId;
+    @ManyToOne
+    @JoinColumn(name = "TALENT_ID")
+    private Talent talent;
 
     public Match() {}
-
-    public Match(Long beneficiaryId, Long donatorId, Long talentId) {
-        this.beneficiaryId = beneficiaryId;
-        this.donatorId = donatorId;
-        this.talentId = talentId;
-    }
 
     public Long getId() {
         return id;
@@ -40,28 +43,43 @@ public class Match {
         this.id = id;
     }
 
-    public Long getBeneficiaryId() {
-        return beneficiaryId;
+    public Person getBeneficiary() {
+        return beneficiary;
     }
 
-    public void setBeneficiaryId(Long beneficiaryId) {
-        this.beneficiaryId = beneficiaryId;
+    public void setBeneficiary(Person beneficiary) {
+        this.beneficiary = beneficiary;
     }
 
-    public Long getDonatorId() {
-        return donatorId;
+    public Person getDonator() {
+        return donator;
     }
 
-    public void setDonatorId(Long donatorId) {
-        this.donatorId = donatorId;
+    public void setDonator(Person donator) {
+        this.donator = donator;
+    }
+    // public Long getBeneficiaryId() {
+    //     return beneficiaryId;
+    // }
+
+    // public void setBeneficiaryId(Long beneficiaryId) {
+    //     this.beneficiaryId = beneficiaryId;
+    // }
+
+    // public Long getDonatorId() {
+    //     return donatorId;
+    // }
+
+    // public void setDonatorId(Long donatorId) {
+    //     this.donatorId = donatorId;
+    // }
+
+    public Talent getTalent() {
+        return talent;
     }
 
-    public Long getTalentId() {
-        return talentId;
-    }
-
-    public void setTalentId(Long talentId) {
-        this.talentId = talentId;
+    public void setTalent(Talent talent) {
+        this.talent = talent;
     }
 
     

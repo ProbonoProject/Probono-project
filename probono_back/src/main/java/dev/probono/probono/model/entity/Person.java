@@ -19,7 +19,6 @@ public class Person {
 
     @Column
     private String name;
-
     
     private String email;
 
