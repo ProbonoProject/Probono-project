@@ -1,9 +1,6 @@
 package dev.probono.probono.model.entity;
 
-import java.util.List;
-
 import javax.persistence.Column;
-import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,11 +19,9 @@ public class Person {
     
     private String email;
 
-    @Convert(converter = PersonConverter.class)
-    private List<Long> listBenefit;
+    private Long benefit;
 
-    @Convert(converter = PersonConverter.class)
-    private List<Long> listDonation;
+    private Long donation;
 
     public Person() {}
 
@@ -34,11 +29,11 @@ public class Person {
         this.name = name;
     }
 
-    public Person(String name, String email, List<Long> listBenefit, List<Long> listDonation) {
+    public Person(String name, String email, Long benefit, Long donation) {
         this.name = name;
         this.email = email;
-        this.listBenefit = listBenefit;
-        this.listDonation = listDonation;
+        this.benefit = benefit;
+        this.donation = donation;
     }
 
     public Long getId() {
@@ -65,20 +60,20 @@ public class Person {
         this.email = email;
     }
 
-    public List<Long> getListBenefit() {
-        return listBenefit;
+    public Long getBenefit() {
+        return benefit;
     }
 
-    public void setListBenefit(List<Long> listBenefit) {
-        this.listBenefit = listBenefit;
+    public void setBenefit(Long benefit) {
+        this.benefit = benefit;
     }
 
-    public List<Long> getListDonation() {
-        return listDonation;
+    public Long getDonation() {
+        return donation;
     }
 
-    public void setListDonation(List<Long> listDonation) {
-        this.listDonation = listDonation;
+    public void setDonation(Long donation) {
+        this.donation = donation;
     }
 
 }

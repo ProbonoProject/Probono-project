@@ -1,7 +1,5 @@
 package dev.probono.probono.model.dto;
 
-import java.util.List;
-
 import dev.probono.probono.model.entity.Person;
 
 public class PersonDTO {
@@ -9,19 +7,20 @@ public class PersonDTO {
     private Long id;
     private String name;
     private String email;
-    private List<Long> listBenefit;
-    private List<Long> listDonation;
+    private Long benefit;
+    private Long donation;
 
     
 
     public PersonDTO() {}
 
     public PersonDTO(Person person) {
+        
         this.id = person.getId();
         this.name = person.getName();
         this.email = person.getEmail();
-        this.listBenefit = person.getListBenefit();
-        this.listDonation = person.getListDonation();
+        this.benefit = person.getBenefit();
+        this.donation = person.getDonation();
     
     }
 
@@ -49,20 +48,20 @@ public class PersonDTO {
         this.email = email;
     }
 
-    public List<Long> getListBenefit() {
-        return listBenefit;
+    public Long getBenefit() {
+        return benefit;
     }
 
-    public void setListBenefit(List<Long> listBenefit) {
-        this.listBenefit = listBenefit;
+    public void setBenefit(Long benefit) {
+        this.benefit = benefit;
     }
 
-    public List<Long> getListDonation() {
-        return listDonation;
+    public Long getDonation() {
+        return donation;
     }
 
-    public void setListDonation(List<Long> listDonation) {
-        this.listDonation = listDonation;
+    public void setDonation(Long donation) {
+        this.donation = donation;
     }
 
     

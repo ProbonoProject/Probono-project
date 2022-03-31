@@ -9,8 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import dev.probono.probono.model.entity.Person;
+import dev.probono.probono.model.entity.Talent;
 import dev.probono.probono.model.dto.PersonDTO;
 import dev.probono.probono.repository.PersonRepository;
+import dev.probono.probono.repository.TalentRepository;
 
 @Service
 public class PersonServiceImpl implements PersonService {
@@ -18,14 +20,17 @@ public class PersonServiceImpl implements PersonService {
     @Autowired
     PersonRepository personRepository;
 
+    @Autowired
+    TalentRepository talentRepository;
+
     @Override
     public void insertPerson(PersonDTO personDTO) {
 
         Person person = new Person();
         person.setName(personDTO.getName());
         person.setEmail(personDTO.getEmail());
-        person.setListBenefit(personDTO.getListBenefit());
-        person.setListDonation(personDTO.getListDonation());
+        person.setBenefit(personDTO.getBenefit());
+        person.setDonation(personDTO.getDonation());
 
         personRepository.save(person);
         
@@ -39,6 +44,7 @@ public class PersonServiceImpl implements PersonService {
         
         return result;
     }
+
 
     @Override
     public PersonDTO getOnePerson(Long personId) {
@@ -59,7 +65,7 @@ public class PersonServiceImpl implements PersonService {
     @Override
     public List<PersonDTO> getAllBeneficiaries() {
 
-        List<Person> list = personRepository.findByListBenefitNotNull();
+        List<Person> list = personRepository.findByBenefitNotNull();
         List<PersonDTO> result = list.stream().map(r -> new PersonDTO(r)).collect(Collectors.toList());
         
         return result;
@@ -68,7 +74,16 @@ public class PersonServiceImpl implements PersonService {
     @Override
     public List<PersonDTO> getAllDonators() {
 
-        List<Person> list = personRepository.findByListDonationNotNull();
+        List<Person> list = personRepository.findByDonationNotNull();
+        List<PersonDTO> result = list.stream().map(r -> new PersonDTO(r)).collect(Collectors.toList());
+        return result;
+    }
+
+    @Override
+    public List<PersonDTO> getAllPersonsWithTalent(Long talentId) {
+
+        Talent talent = talentRepository.getById(talentId);
+        List<Person> list = personRepository.findByBenefitOrDonation(talent.getId(), talent.getId());
         List<PersonDTO> result = list.stream().map(r -> new PersonDTO(r)).collect(Collectors.toList());
         return result;
     }
