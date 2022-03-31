@@ -29,7 +29,7 @@ public class MatchServiceImpl implements MatchService {
         Talent talent = talentRepository.getById(matchDTO.getTalentId());
         Person beneficiary = personRepository.getById(matchDTO.getBeneficiaryId());
         Person donator = personRepository.getById(matchDTO.getDonatorId());
-
+        
         Match match = new Match();
 
         match.setBeneficiary(beneficiary);

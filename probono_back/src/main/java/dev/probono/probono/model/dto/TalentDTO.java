@@ -29,5 +29,6 @@ public class TalentDTO {
     public void setTalentType(String talentType) {
         this.talentType = talentType;
     }
+
     
 }
