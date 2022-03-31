@@ -8,7 +8,7 @@ import dev.probono.probono.model.entity.Person;
 
 public interface PersonRepository extends JpaRepository<Person, Long>{
     
-    List<Person> findByListBenefitNotNull();
-    List<Person> findByListDonationNotNull();
-    
+    List<Person> findByBenefitNotNull();
+    List<Person> findByDonationNotNull();
+    List<Person> findByBenefitOrDonation(Long talentId1, Long talentId2);
 }

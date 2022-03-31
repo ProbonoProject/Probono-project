@@ -7,8 +7,6 @@ public class MatchDTO {
     private Long beneficiaryId;
     private Long donatorId;
     private Long talentId;
-    // private Talent talent;
-    // private Person person;
     
     public MatchDTO() {}
     
@@ -50,22 +48,5 @@ public class MatchDTO {
     public void setTalentId(Long talentId) {
         this.talentId = talentId;
     }
-
-    // public Talent getTalent() {
-    //     return talent;
-    // }
-
-    // public void setTalent(Talent talent) {
-    //     this.talent = talent;
-    // }
-
-    // public Person getPerson() {
-    //     return person;
-    // }
-
-    // public void setPerson(Person person) {
-    //     this.person = person;
-    // }
-    
     
 }
