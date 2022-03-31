@@ -12,15 +12,23 @@ import dev.probono.probono.repository.TalentRepository;
 
 @Service
 public class TalentServiceImpl implements TalentService {
-    
+
     @Autowired
     private TalentRepository talentRepository;
 
     @Override
+    public void insertTalent(TalentDTO talentDTO) {
+        Talent talent = new Talent();
+        talent.setTalentType(talentDTO.getTalentType());
+
+        talentRepository.save(talent);
+    }
+
+    @Override
     public List<TalentDTO> getAllTalents() {
-        List<Talent> list  = talentRepository.findAll();
+        List<Talent> list = talentRepository.findAll();
         List<TalentDTO> result = list.stream().map(r -> new TalentDTO(r)).collect(Collectors.toList());
-        
+
         return result;
     }
 }

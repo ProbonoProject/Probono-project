@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Probono Project</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
-    <link rel="stylesheet" href="main.css">
-
+    <link rel="stylesheet" href="benefit.css">
+    <script defer src="donation.js"></script>
 </head>
 <body>
     <article>
@@ -15,7 +15,7 @@
             <div class="Header">
                 <div class="Header__main">
                     <h1 class="Header__main__logo">
-                        <a href="main.html">
+                        <a href="../main/main.html">
                             <img src="../images/probono logo.jpg" alt="probono logo">
                         </a>
                     </h1>
@@ -46,23 +46,33 @@
                     <div class="Language">
                         <li><a href="#">Language</a>
                     </div>
-                    <form action="../afterLogin/afterLogin.html">
-                        <div class="Login">
-                            <input id="username" type="text" name="username" placeholder="아이디"> 
-                            <label for="username">아이디</label>
-                            <input type="submit" value="로그인">
-                        </div>
-                    </form>
+                    <div class="BookMark">
+                        <ul>
+                            <li><a href="#">나의 즐겨찾기</a></li>
+                            <li><a href="#">기부내용 등록하기</a></li>
+                            <li><a href="#">기부내용 수정하기</a></li>
+                        </ul>
+                    </div>
+                    <div class="MyMatch">
+                        <ul>
+                            <li><a href="#">나의 매칭 보기</a></li>
+                            <li><a href="#">수혜내용 등록하기</a></li>
+                            <li><a href="#">수혜내용 수정하기</a></li>
+                        </ul>
+                    </div>
                     <div class="QR">
                         <img src="https://us.123rf.com/450wm/rastudio/rastudio1604/rastudio160407828/55170717-%EC%9B%B9-%EB%AA%A8%EB%B0%94%EC%9D%BC-%EB%B0%8F-infographics%EC%97%90-%EB%8C%80%ED%95%9C-%EB%AA%A8%EC%84%9C%EB%A6%AC%EC%99%80-%EB%AA%A8%EC%84%9C%EB%A6%AC%EA%B0%80-%EB%BE%B0%EC%A1%B1%ED%95%9C-qr-%EC%BD%94%EB%93%9C-%EB%91%90%EA%BA%BC%EC%9A%B4-%EC%84%A0-%EC%95%84%EC%9D%B4%EC%BD%98-%EB%B2%A1%ED%84%B0-%EA%B2%A9%EB%A6%AC-%EC%95%84%EC%9D%B4%EC%BD%98%EC%9E%85%EB%8B%88%EB%8B%A4-.jpg?ver=6" alt="QR img">
-                    </div> 
+                    </div>
                 </div> 
             </div>
             <hr>
         </header>
         <section>
+            <div>
+                    <table class="tableTalent" id="table">
+                    </table>
 
-
+            </div>
         </section>
         <footer>
             <hr>
