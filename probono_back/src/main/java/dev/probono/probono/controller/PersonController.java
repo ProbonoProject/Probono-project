@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,9 +38,10 @@ public class PersonController {
 
     @GetMapping("/id")
     public PersonDTO getOnePerson(@RequestParam Long personId) {
+
         return personService.getOnePerson(personId);
     }
-
+    
     @GetMapping("/beneficiaries")
     public List<PersonDTO> getAllBeneficiaries() {
         return personService.getAllBeneficiaries();
@@ -49,4 +51,16 @@ public class PersonController {
     public List<PersonDTO> getAllDonators() {
         return personService.getAllDonators();
     }
+
+    @GetMapping("/talent")
+    public List<PersonDTO> getAllPersonsWithTalent(@RequestParam Long talentId) {
+        return personService.getAllPersonsWithTalent(talentId);
+    }
+
+    //---------------------------
+
+    // @PatchMapping("/benefit")
+    // public void updateBenefit(@Requst) {
+        
+    // }
 }

@@ -58,21 +58,6 @@ public class Match {
     public void setDonator(Person donator) {
         this.donator = donator;
     }
-    // public Long getBeneficiaryId() {
-    //     return beneficiaryId;
-    // }
-
-    // public void setBeneficiaryId(Long beneficiaryId) {
-    //     this.beneficiaryId = beneficiaryId;
-    // }
-
-    // public Long getDonatorId() {
-    //     return donatorId;
-    // }
-
-    // public void setDonatorId(Long donatorId) {
-    //     this.donatorId = donatorId;
-    // }
 
     public Talent getTalent() {
         return talent;
