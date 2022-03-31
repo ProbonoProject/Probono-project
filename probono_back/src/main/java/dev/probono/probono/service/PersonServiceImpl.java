@@ -25,20 +25,17 @@ public class PersonServiceImpl implements PersonService {
 
     @Override
     public void insertPerson(PersonDTO personDTO) {
-
         Person person = new Person();
         person.setName(personDTO.getName());
         person.setEmail(personDTO.getEmail());
         person.setBenefit(personDTO.getBenefit());
         person.setDonation(personDTO.getDonation());
-
-        personRepository.save(person);
         
+        personRepository.save(person);
     }
 
     @Override
     public List<PersonDTO> getAllPersons() {
-        
         List<Person> list  = personRepository.findAll();
         List<PersonDTO> result = list.stream().map(r -> new PersonDTO(r)).collect(Collectors.toList());
         
@@ -64,7 +61,6 @@ public class PersonServiceImpl implements PersonService {
 
     @Override
     public List<PersonDTO> getAllBeneficiaries() {
-
         List<Person> list = personRepository.findByBenefitNotNull();
         List<PersonDTO> result = list.stream().map(r -> new PersonDTO(r)).collect(Collectors.toList());
         
@@ -73,19 +69,35 @@ public class PersonServiceImpl implements PersonService {
 
     @Override
     public List<PersonDTO> getAllDonators() {
-
         List<Person> list = personRepository.findByDonationNotNull();
         List<PersonDTO> result = list.stream().map(r -> new PersonDTO(r)).collect(Collectors.toList());
+
         return result;
     }
 
     @Override
     public List<PersonDTO> getAllPersonsWithTalent(Long talentId) {
-
         Talent talent = talentRepository.getById(talentId);
         List<Person> list = personRepository.findByBenefitOrDonation(talent.getId(), talent.getId());
         List<PersonDTO> result = list.stream().map(r -> new PersonDTO(r)).collect(Collectors.toList());
+
         return result;
+    }
+
+    @Override
+    public void updateBenefit(Long personId, PersonDTO personDTO) {
+        Person person = personRepository.getById(personId);
+        person.setBenefit(personDTO.getBenefit());
+        
+        personRepository.save(person);
+    }
+
+    @Override
+    public void updateDonation(Long personId, PersonDTO personDTO) {
+        Person person = personRepository.getById(personId);
+        person.setDonation(personDTO.getDonation());
+        
+        personRepository.save(person);
     }
 
 }

@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,7 +28,6 @@ public class PersonController {
 
     @PostMapping()
     public void insertPerson(@RequestBody PersonDTO personDTO) {
-        System.out.println(personDTO);
         personService.insertPerson(personDTO);
     }
 
@@ -38,7 +38,6 @@ public class PersonController {
 
     @GetMapping("/id")
     public PersonDTO getOnePerson(@RequestParam Long personId) {
-
         return personService.getOnePerson(personId);
     }
     
@@ -59,8 +58,13 @@ public class PersonController {
 
     //---------------------------
 
-    // @PatchMapping("/benefit")
-    // public void updateBenefit(@Requst) {
-        
-    // }
+    @PatchMapping("/benefit/{id}")
+    public void updateBenefit(@PathVariable(value="id") Long personId, @RequestBody PersonDTO personDTO) {
+        personService.updateBenefit(personId, personDTO);
+    }
+
+    @PatchMapping("/donation/{id}")
+    public void updateDonation(@PathVariable(value="id") Long personId, @RequestBody PersonDTO personDTO) {
+        personService.updateDonation(personId, personDTO);
+    }
 }
