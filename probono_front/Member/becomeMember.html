@@ -15,7 +15,7 @@
                 <div class="Header__main">
                     <h1 class="Header__main__logo">
                         <a href="../main/Loginbefore.html">
-                            <img src="../images/probono logo.jpg" alt="probono logo">
+                            <img src="../main/img/probono logo.jpg" alt="probono logo">
                         </a>
                     </h1>
                     <ul class="Header__main__menu">
@@ -33,8 +33,8 @@
                         </li>
                         <li><a href="#">기부</a>
                             <ul>
-                                <li><a href="#">기부자 목록 보기</a></li>
-                                <li><a href="#">수혜자 목록 보기</a></li>
+                                <li><a href="../ViewList/donation.html">기부자 목록 보기</a></li>
+                                <li><a href="../ViewList/benefit.html">수혜자 목록 보기</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -47,15 +47,15 @@
                     <div class="BookMark">
                         <ul>
                             <li><a href="#">나의 즐겨찾기</a></li>
-                            <li><a href="#">기부내용 등록하기</a></li>
-                            <li><a href="#">기부내용 수정하기</a></li>
+                            <li><a href="">기부내용 등록하기</a></li>
+                            <li><a href="../update/donatorUpdate.html">기부내용 수정하기</a></li>
                         </ul>
                     </div>
                     <div class="MyMatch">
                         <ul>
                             <li><a href="#">나의 매칭 보기</a></li>
                             <li><a href="#">수혜내용 등록하기</a></li>
-                            <li><a href="#">수혜내용 수정하기</a></li>
+                            <li><a href="../update/beneficiaryUpdate.html">수혜내용 수정하기</a></li>
                         </ul>
                     </div>
                     <div class="QR">
@@ -67,9 +67,9 @@
         </header>
         <section>
             <h3>회원가입</h3>
-            <form action="successMember.html">
+            <form id="formElem">
                 <div class="becomeMember">
-                    <input id="username" type="text" name="username" placeholder="아이디"> 
+                    <input id="username" type="text" name="username" placeholder="이름"> 
                     <label for="username">이름</label>
                 </div>
                 <div class="becomeMember">    
@@ -77,25 +77,95 @@
                     <label for="username">이메일</label>
                 </div>
                 <div class="BenefitList">
-                    <select name="benefit">
+                    <select name="benefit" class="benefitSelect">
                         <option value="none">수혜 타입 선택</option>
-                        <option value="과외" label="과외"></option>
-                        <option value="악기" label="악기"></option>
-                        <option value="운동" label="운동"></option>
-                        <option value="요리" label="요리"></option>
+                        <option value="1" label="과외"></option>
+                        <option value="2" label="악기"></option>
+                        <option value="3" label="운동"></option>
+                        <option value="4" label="요리"></option>
                     </select>
                 </div>
                 <div class="DonateList">
-                    <select name="donate">
+                    <select name="donate" class="donateSelect">
                         <option value="none">기부 타입 선택</option>
-                        <option value="과외" label="과외"></option>
-                        <option value="악기" label="악기"></option>
-                        <option value="운동" label="운동"></option>
-                        <option value="요리" label="요리"></option>
+                        <option value="1" label="과외"></option>
+                        <option value="2" label="악기"></option>
+                        <option value="3" label="운동"></option>
+                        <option value="4" label="요리"></option>
                     </select>
                 </div>
-                <input type="submit" value="확인">
+                <input type="submit" value="확인" onclick="document.location.href='successMember.html'">
             </form>
+
+            <script>
+                const benefitList = document.querySelector(".benefitSelect");
+                const donateList = document.querySelector(".donateSelect");
+                var benefitChoice;
+                var donateChoice;
+                function benefit() {
+                    const choice = benefitList.value;
+                    if (choice == "none") {
+                        benefitChoice = null;
+                    } else {
+                        benefitChoice = choice;
+                    }
+                    console.log(benefitChoice);
+                }
+                function donate() {
+                    const choice = donateList.value;
+                    if (choice == "none") {
+                        donateChoice = null;
+                    } else {
+                        donateChoice = choice;
+                    }
+                    console.log(donateChoice);
+                }
+                benefitList.addEventListener('change', benefit);
+                donateList.addEventListener('change', donate);
+
+                formElem.onsubmit = async (e) => {
+                    e.preventDefault();
+                    const form = document.querySelector("#formElem");
+                    
+                    if (benefitChoice == null && donateChoice == null) {
+                        data = {
+                        name : form.querySelector('input[name="username"]').value,
+                        email : form.querySelector('input[name="useremail"]').value,
+                        listBenefit : null,
+                        listDonation : null
+                        }
+                    } else if (benefitChoice != null && donateChoice == null) {
+                        data = {
+                        name : form.querySelector('input[name="username"]').value,
+                        email : form.querySelector('input[name="useremail"]').value,
+                        listBenefit : benefitChoice.split(","),
+                        listDonation : null
+                        }
+                    } else if (benefitChoice == null && donateChoice != null) {
+                        data = {
+                        name : form.querySelector('input[name="username"]').value,
+                        email : form.querySelector('input[name="useremail"]').value,
+                        listBenefit : null,
+                        listDonation : donateChoice.split(",")
+                        }
+                    } else {
+                        data = {
+                        name : form.querySelector('input[name="username"]').value,
+                        email : form.querySelector('input[name="useremail"]').value,
+                        listBenefit : benefitChoice.split(","),
+                        listDonation : donateChoice.split(",")
+                        }
+                    }
+                    
+                    let response = await fetch('http://localhost:8090/api/v1/persons', {
+                            method: 'POST', 
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(data),
+                    })
+                };
+            </script>
         </section>
         <footer>
             <hr>
