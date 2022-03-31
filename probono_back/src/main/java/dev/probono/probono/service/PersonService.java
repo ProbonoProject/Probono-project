@@ -10,4 +10,6 @@ public interface PersonService {
     List<PersonDTO> getAllBeneficiaries();
     List<PersonDTO> getAllDonators();
     PersonDTO getOnePerson(Long personId);
+    List<PersonDTO> getAllPersonsWithTalent(Long talentId);
+    
 }
