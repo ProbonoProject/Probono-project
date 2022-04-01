@@ -55,13 +55,13 @@ function choiceNum() {
 			// 테이블 헤더 생성
 			let talentInDonationRow_head = document.createElement("tr");
 			let talentInDonationHeading_1 = document.createElement("th");
-			talentInDonationHeading_1.innerHTML = "name";
+			talentInDonationHeading_1.innerHTML = "이름";
 			let talentInDonationHeading_2 = document.createElement("th");
 			talentInDonationHeading_2.innerHTML = "email";
 			// let talentInDonationHeading_3 = document.createElement("th");
 			// talentInDonationHeading_3.innerHTML = "donation";
 			let talentInDonationHeading_4 = document.createElement("th");
-			talentInDonationHeading_4.innerHTML = "donation name";
+			talentInDonationHeading_4.innerHTML = "기부 재능";
 
 			talentInDonationRow_head.appendChild(talentInDonationHeading_1);
 			talentInDonationRow_head.appendChild(talentInDonationHeading_2);
@@ -134,13 +134,13 @@ function choiceNum() {
 			// 테이블 헤더 생성
 			let talentInBenefitRow_head = document.createElement("tr");
 			let talentInBenefitHead_1 = document.createElement("th");
-			talentInBenefitHead_1.innerHTML = "name";
+			talentInBenefitHead_1.innerHTML = "이름";
 			let talentInBenefitHead_2 = document.createElement("th");
 			talentInBenefitHead_2.innerHTML = "email";
 			// let talentInBenefitHead_3 = document.createElement("th");
 			// talentInBenefitHead_3.innerHTML = "benefit";
 			let talentInBenefitHead_4 = document.createElement("th");
-			talentInBenefitHead_4.innerHTML = "benefit name";
+			talentInBenefitHead_4.innerHTML = "수혜 재능";
 
 			talentInBenefitRow_head.appendChild(talentInBenefitHead_1);
 			talentInBenefitRow_head.appendChild(talentInBenefitHead_2);

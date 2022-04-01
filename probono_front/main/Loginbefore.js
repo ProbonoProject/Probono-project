@@ -55,17 +55,17 @@ function choiceNum() {
 			// 테이블 헤더 생성
 			let talentInDonationRow_head = document.createElement("tr");
 			let talentInDonationHeading_1 = document.createElement("th");
-			talentInDonationHeading_1.innerHTML = "name";
+			talentInDonationHeading_1.innerHTML = "이름";
 			let talentInDonationHeading_2 = document.createElement("th");
 			talentInDonationHeading_2.innerHTML = "email";
-			let talentInDonationHeading_3 = document.createElement("th");
-			talentInDonationHeading_3.innerHTML = "donation";
+			// let talentInDonationHeading_3 = document.createElement("th");
+			// talentInDonationHeading_3.innerHTML = "donation";
 			let talentInDonationHeading_4 = document.createElement("th");
-			talentInDonationHeading_4.innerHTML = "donation name";
+			talentInDonationHeading_4.innerHTML = "기부 재능";
 
 			talentInDonationRow_head.appendChild(talentInDonationHeading_1);
 			talentInDonationRow_head.appendChild(talentInDonationHeading_2);
-			talentInDonationRow_head.appendChild(talentInDonationHeading_3);
+			// talentInDonationRow_head.appendChild(talentInDonationHeading_3);
 			talentInDonationRow_head.appendChild(talentInDonationHeading_4);
 			talentInDonationHead.appendChild(talentInDonationRow_head);
 
@@ -77,8 +77,8 @@ function choiceNum() {
 				row_body_name.innerHTML = data[index].name;
 				let row_body_email = document.createElement("td");
 				row_body_email.innerHTML = data[index].email;
-				let row_body_num = document.createElement("td");
-				row_body_num.innerHTML = num;
+				// let row_body_num = document.createElement("td");
+				// row_body_num.innerHTML = num;
 
 				if (data[index].donation == num) {
 					let row_body_donation = document.createElement("td");
@@ -114,7 +114,7 @@ function choiceNum() {
 
 					row_body.appendChild(row_body_name);
 					row_body.appendChild(row_body_email);
-					row_body.appendChild(row_body_num);
+					// row_body.appendChild(row_body_num);
 					row_body.appendChild(row_body_donation);
 					talentInDonationBody.appendChild(row_body);
 				}
@@ -134,17 +134,17 @@ function choiceNum() {
 			// 테이블 헤더 생성
 			let talentInBenefitRow_head = document.createElement("tr");
 			let talentInBenefitHead_1 = document.createElement("th");
-			talentInBenefitHead_1.innerHTML = "name";
+			talentInBenefitHead_1.innerHTML = "이름";
 			let talentInBenefitHead_2 = document.createElement("th");
 			talentInBenefitHead_2.innerHTML = "email";
-			let talentInBenefitHead_3 = document.createElement("th");
-			talentInBenefitHead_3.innerHTML = "benefit";
+			// let talentInBenefitHead_3 = document.createElement("th");
+			// talentInBenefitHead_3.innerHTML = "benefit";
 			let talentInBenefitHead_4 = document.createElement("th");
-			talentInBenefitHead_4.innerHTML = "benefit name";
+			talentInBenefitHead_4.innerHTML = "수혜 재능";
 
 			talentInBenefitRow_head.appendChild(talentInBenefitHead_1);
 			talentInBenefitRow_head.appendChild(talentInBenefitHead_2);
-			talentInBenefitRow_head.appendChild(talentInBenefitHead_3);
+			// talentInBenefitRow_head.appendChild(talentInBenefitHead_3);
 			talentInBenefitRow_head.appendChild(talentInBenefitHead_4);
 			talentInBenefitHead.appendChild(talentInBenefitRow_head);
 
@@ -156,8 +156,8 @@ function choiceNum() {
 				row_body_name.innerHTML = data[index].name;
 				let row_body_email = document.createElement("td");
 				row_body_email.innerHTML = data[index].email;
-				let row_body_num = document.createElement("td");
-				row_body_num.innerHTML = num;
+				// let row_body_num = document.createElement("td");
+				// row_body_num.innerHTML = num;
 
 				if (data[index].benefit == num) {
 					let row_body_benefit = document.createElement("td");
@@ -193,7 +193,7 @@ function choiceNum() {
 
 					row_body.appendChild(row_body_name);
 					row_body.appendChild(row_body_email);
-					row_body.appendChild(row_body_num);
+					// row_body.appendChild(row_body_num);
 					row_body.appendChild(row_body_benefit);
 					talentInBenefitBody.appendChild(row_body);
 				}

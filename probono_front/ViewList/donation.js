@@ -32,14 +32,11 @@ fetch(`${url}`)
 		heading_1.innerHTML = "name";
 		let heading_2 = document.createElement("th");
 		heading_2.innerHTML = "email";
-		let heading_3 = document.createElement("th");
-		heading_3.innerHTML = "donation";
 		let heading_5 = document.createElement("th");
 		heading_5.innerHTML = "donation name";
 
 		row_head.appendChild(heading_1);
 		row_head.appendChild(heading_2);
-		row_head.appendChild(heading_3);
 		row_head.appendChild(heading_5);
 		thead.appendChild(row_head);
 
@@ -49,10 +46,6 @@ fetch(`${url}`)
 			row_body_data_1.innerHTML = data[index].name;
 			let row_body_data_2 = document.createElement("td");
 			row_body_data_2.innerHTML = data[index].email;
-			let row_body_data_3 = document.createElement("td");
-			row_body_data_3.innerHTML = data[index].donation;
-
-
 			let row_body_data_5 = document.createElement("td");
             
             if(data[index].donation == null) {
@@ -87,7 +80,6 @@ fetch(`${url}`)
 
 			row_body.appendChild(row_body_data_1);
 			row_body.appendChild(row_body_data_2);
-			row_body.appendChild(row_body_data_3);
 			row_body.appendChild(row_body_data_5);
             tbody.appendChild(row_body);
 		}
