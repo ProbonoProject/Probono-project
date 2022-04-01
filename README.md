@@ -34,9 +34,9 @@
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/57746855/161205648-18c771d0-6238-4f9f-8399-66b98d9486f7.gif)
 
 # 🎃 이슈 / 🎯트러블 슈팅
-<a href="https://github.com/ProbonoProject/Probono-project/issues?q=is%3Aissue+is%3Aclosed"><img src="https://img.shields.io/badge/CLOSED - issues-D9B68B?style=for-the-badge&logoWidth=50"/></a>
+<a href="https://github.com/ProbonoProject/Probono-project/issues?q=is%3Aissue+is%3Aclosed"><img src="https://img.shields.io/badge/click me - CLOSE issues-D9B68B?style=for-the-badge&logoWidth=50"/></a>
 
-<a href="https://github.com/ProbonoProject/Probono-project/issues?q=is%3Aopen+is%3Aissue"><img src="https://img.shields.io/badge/OPENED - issues-D9B68B?style=for-the-badge&logoWidth=50"/></a>
+<a href="https://github.com/ProbonoProject/Probono-project/issues?q=is%3Aopen+is%3Aissue"><img src="https://img.shields.io/badge/click me - OPENED issues-D9B68B?style=for-the-badge&logoWidth=50"/></a>
 
 
 ## 🧐개선 사항
