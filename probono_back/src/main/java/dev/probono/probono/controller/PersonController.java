@@ -3,17 +3,16 @@ package dev.probono.probono.controller;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-
-import dev.probono.probono.model.dto.PersonDTO;
 import dev.probono.probono.service.PersonService;
+import dev.probono.probono.model.dto.PersonDTO;
 
 @CrossOrigin(origins = "*")
 @RestController
@@ -25,7 +24,7 @@ public class PersonController {
     public PersonController(PersonService personService) {
         this.personService = personService;
     }
-
+    
     @PostMapping()
     public void insertPerson(@RequestBody PersonDTO personDTO) {
         personService.insertPerson(personDTO);
@@ -35,12 +34,12 @@ public class PersonController {
     public List<PersonDTO> getAllPersons() {
         return personService.getAllPersons();
     }
-
+    
     @GetMapping("/id")
     public PersonDTO getOnePerson(@RequestParam Long personId) {
         return personService.getOnePerson(personId);
     }
-    
+
     @GetMapping("/beneficiaries")
     public List<PersonDTO> getAllBeneficiaries() {
         return personService.getAllBeneficiaries();
@@ -56,8 +55,6 @@ public class PersonController {
         return personService.getAllPersonsWithTalent(talentId);
     }
 
-    //---------------------------
-
     @PatchMapping("/benefit/{id}")
     public void updateBenefit(@PathVariable(value="id") Long personId, @RequestBody PersonDTO personDTO) {
         personService.updateBenefit(personId, personDTO);
@@ -67,4 +64,5 @@ public class PersonController {
     public void updateDonation(@PathVariable(value="id") Long personId, @RequestBody PersonDTO personDTO) {
         personService.updateDonation(personId, personDTO);
     }
+
 }

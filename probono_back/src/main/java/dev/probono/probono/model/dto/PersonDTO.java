@@ -13,13 +13,11 @@ public class PersonDTO {
     public PersonDTO() {}
 
     public PersonDTO(Person person) {
-        
         this.id = person.getId();
         this.name = person.getName();
         this.email = person.getEmail();
         this.benefit = person.getBenefit();
         this.donation = person.getDonation();
-    
     }
 
     public Long getId() {
@@ -62,5 +60,4 @@ public class PersonDTO {
         this.donation = donation;
     }
 
-    
 }

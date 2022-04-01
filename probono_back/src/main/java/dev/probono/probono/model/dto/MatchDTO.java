@@ -1,6 +1,5 @@
 package dev.probono.probono.model.dto;
 
-
 public class MatchDTO {
     
     private Long id; 
@@ -10,13 +9,6 @@ public class MatchDTO {
     
     public MatchDTO() {}
     
-    public MatchDTO(Long id, Long beneficiaryId, Long donatorId, Long talentId) {
-        this.id = id;
-        this.beneficiaryId = beneficiaryId;
-        this.donatorId = donatorId;
-        this.talentId = talentId;
-    }
-
     public Long getId() {
         return id;
     }

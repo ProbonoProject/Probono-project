@@ -25,7 +25,6 @@ public class MatchServiceImpl implements MatchService {
 
     @Override
     public void insertMatch(MatchDTO matchDTO) {
-
         Talent talent = talentRepository.getById(matchDTO.getTalentId());
         Person beneficiary = personRepository.getById(matchDTO.getBeneficiaryId());
         Person donator = personRepository.getById(matchDTO.getDonatorId());
@@ -38,4 +37,5 @@ public class MatchServiceImpl implements MatchService {
 
         matchRepository.save(match);
     }
+    
 }
