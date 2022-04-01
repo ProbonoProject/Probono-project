@@ -28,6 +28,11 @@
  ## ⏰ 기간
  - 22/03/28 ~ 22/04/01
 
+## ERD/ CLASS DIAGTAM
+![erd](https://user-images.githubusercontent.com/57746855/161210562-42f5bb18-a53f-4c94-87df-4e234cffe967.png)
+![classDiagram](https://user-images.githubusercontent.com/57746855/161210570-7165c227-19eb-4339-8a3d-37cae68c1879.png)
+
+
 ## 🖥실제 화면
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/57746855/161205648-18c771d0-6238-4f9f-8399-66b98d9486f7.gif)
 
