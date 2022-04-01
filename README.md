@@ -28,6 +28,17 @@
  ## ⏰ 기간
  - 22/03/28 ~ 22/04/01
 
+## 🛠 사용 기술 스택
+<p>
+<p>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" width="50" height="50"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" width="50" height="50"/> 
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="50" height="50"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" width="50" height="50"/> 
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original-wordmark.svg" width="50" height="50"/>
+</p>
+</p>
+
 ## ERD/ CLASS DIAGTAM
 ![erd](https://user-images.githubusercontent.com/57746855/161210562-42f5bb18-a53f-4c94-87df-4e234cffe967.png)
 ![classDiagram](https://user-images.githubusercontent.com/57746855/161210570-7165c227-19eb-4339-8a3d-37cae68c1879.png)
