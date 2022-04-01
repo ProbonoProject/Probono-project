@@ -6,6 +6,9 @@
 - 😶 [장수진](https://github.com/suziinee)
 - 😀 [홍도희](https://github.com/dohee789)
 
+## 📺 Mock-up Tool
+[KAKAO OVEN](https://ovenapp.io/project/PVJuJgIbu7KHZswjiy4EmrfGgnraKCZH#aiuw6)
+
 ## 🎈 서비스 소개
 - 🚀재능 기부 수혜 구성
 
