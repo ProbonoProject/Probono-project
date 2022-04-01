@@ -12,41 +12,44 @@
 - 🚀재능 기부 수혜 구성
 
 < 상세 내용 >
-1. 로그인 기능
-2. 재능 검색
-3. 수정
+1. 회원 가입
+2. 기부자 수혜자 목록 보기
+3. 검색하기
 
    ```
-   a. ㅁㄴㅇㄹ
+   a. 검색을 원하는 재능 선택
 
-   b. ㅁㄴㅇㄹ
+   b. 검색 버튼 클릭
 
-   c. ㅁㄴㅇㄹ
+   c. 기부 혹은 수혜에 재능이 등록된 사람들의 테이블 출력
 
-   d. ㅁㄴㅇㄹ
    ```
    
+ - 수정하기
+ 
  ## ⏰ 기간
  - 22/03/28 ~ 22/04/01
 
 ## 🖥실제 화면
 
-# 🎃 이슈
-<a href="https://github.com/ProbonoProject/Probono-project/issues"><img src="https://img.shields.io/badge/CLICK ME - issues-D9B68B?style=for-the-badge&logoWidth=50"/></a>
+# 🎃 이슈 / 🎯트러블 슈팅
+<a href="https://github.com/ProbonoProject/Probono-project/issues?q=is%3Aissue+is%3Aclosed"><img src="https://img.shields.io/badge/CLOSED - issues-D9B68B?style=for-the-badge&logoWidth=50"/></a>
 
-## 🎯트러블 슈팅
-
-### front end
-- asdf
-
-### back end
-- asdf
+<a href="https://github.com/ProbonoProject/Probono-project/issues?q=is%3Aopen+is%3Aissue"><img src="https://img.shields.io/badge/OPENED - issues-D9B68B?style=for-the-badge&logoWidth=50"/></a>
 
 
 ## 🧐개선 사항
 
-- ㅁㄴㅇㄹ
+- 즐겨찾기(북마크)
+- 삭제 기능 구현
+- 검색 시 값 받아서 페이지 이동해서 보여주기
+- HOVER ME 누르기 전에 Search result in donation, Search result in benefit 안 나오기
+- talent 추가
+- 매칭 보여주기
+- 리액트 사용
+- 롬복 쓸걸
+
 
 ## ❗본 프로젝트를 통해 느낀점
 
-- ㅁㄴㅇㄹ
+- a
