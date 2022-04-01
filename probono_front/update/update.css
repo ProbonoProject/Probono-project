@@ -68,167 +68,113 @@ section {
     flex-grow: 1;
     height: 60%;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: 2px dashed hotpink;
     
 }
 footer {
   height: 20vh;
 }
 
+
 /* Header */
 .Header {
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-    margin: 0 50px;
-    padding: 10px 0;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  margin: 0 50px;
+ 
 }
-
 .Header__main {
-    display: flex;
-    align-items: center;
-}
-
-.Header__main__menu {
-    display: flex;
-    width:700px;
-		height:50px;
-		color:black;
-		line-height: 50px; 
-		margin:0 auto;
-		text-align: center;
-}
-
-.Header__main__menu li {
-    width:200px;
-}
-
-.Header__main__menu li ul {
-		display: none; 
-		position: absolute ;
-		font-size:14px;
-    text-align: center;
-    padding-left: 0;
-}
-
-.Header__main__menu li a:hover, .BookMark li a:hover, .MyMatch li a:hover{
-  color: #9ABF4B;
-} 
-
-.Header__main__menu li:hover ul {
-    display: block;
-}
-
-.Header__main__menu ul li:hover {
-    color: #9ABF4B;
-		transition: ease 1s;
-}
-
-.Header__main__logo img {
   display: flex;
-  width: 20rem;
+  align-items: center;
+}
+.Header__main__menu {
+  display: flex;
+  width:700px;
+  height:50px;
+  color:black;
+  line-height: 50px;
+  margin:0 auto;
+  text-align: center;
+}
+.Header__main__menu li {
+  font-size: 20px;
+  width:200px;
+  padding-bottom: 0px;
+}
+.Header__main__menu li ul {
+  display: none;
+  position: absolute ;
+  text-align: center;
+  padding-left: 0;
+}
+.Header__main__menu li a:hover, .BookMark li a:hover, .MyMatch li a:hover{
+color: #9ABF4B;
+}
+.Header__main__menu li:hover ul {
+  display: block;
+}
+.Header__main__menu ul li:hover {
+  color: #9ABF4B;
+  transition: ease 1s;
+}
+.Header__main__logo img {
+display: flex;
+width: 20rem;
 }
 
 .SiteMap li {
+  font-size: 20px;
   line-height: 50px;
   list-style: none;
   text-align: center;
   width:200px;
-}
-
+  }
 .Language li {
+  font-size: 20px;
   line-height: 50px;
   list-style: none;
   text-align: center;
   width:200px;
-}
-
+  }
+.BookMark {
+    margin-top: 40px;
+  }
 .BookMark ul {
-  padding-left: 0px;
-}
-
+    margin-bottom: 40px;
+    padding-left: 0px;
+  }
+  
 .BookMark li {
-  font-size: small;
-  padding : 0px;
-  padding-bottom: 10px;
-  list-style: none;
-  text-align: center;
-  width:120px;
-}
-
-.MyMatch li {
-  font-size: small;
-  padding-bottom: 10px;
-  list-style: none;
-  text-align: center;
-  width:120px;
-  margin-right: 10px;
-}
-
+    font-size: small;
+    padding : 0px;
+    padding-bottom: 15px;
+    list-style: none;
+    text-align: center;
+    width:120px;
+    font-weight: 700;
+  }
+.MyMatch {
+    margin-top: 40px;
+  }
 .MyMatch ul {
-  padding-right: 20px;
-}
-
-.Login {
-  left:5rem;
-  position:relative; 
-  margin:10px 0
-}
-
-.Login input {
-  background:transparent; 
-  border:none; 
-  border-bottom: solid 1px #ccc; 
-  padding:10px 0px 5px 0px; 
-  font-size:14pt; 
-  width:100%;
-}
-
-.Login input::placeholder { 
-  color:transparent; 
-}
-
-input:placeholder-shown + label { 
-  color:#aaa; 
-  font-size:10pt; 
-  top:20px; 
-}
-
-input:focus + label, label { 
-  color:#9ABF4B; 
-  font-size:5pt; 
-  pointer-events: none; 
-  position: absolute; 
-  left:0px; 
-  top:0px; 
-  transition: all 0.2s ease; 
-  -webkit-transition: all 0.2s ease; 
-  -moz-transition: all 0.2s ease; 
-  -o-transition: all 0.2s ease; 
-}
-
-input:focus, input:not(:placeholder-shown) { 
-  border-bottom: 
-  solid 1px #9ABF4B; 
-  outline:none; 
-}
-
-input[type=submit]{
-  background-color: #9ABF4B;
-  border:none;
-  color:white;
-  border-radius: 5px;
-  font-size: 14pt;
-  margin-top:20px;
-}
+    margin-bottom: 40px;
+    padding-right: 20px;
+  }
+.MyMatch li {
+    font-size: small;
+    padding-bottom: 15px;
+    list-style: none;
+    text-align: center;
+    width:120px;
+    margin-right: 10px;
+    font-weight: 700;
+  }
 
 .QR img {
   padding-left: 10px;
   max-width: 50%;
-  float: right;
 }
 
 
@@ -239,41 +185,35 @@ input[type=submit]{
   font-size: 100px;
 } */
 .Section__update__word {
-  border: 2px solid #212529;
-  margin: 0 0 40px 0;
-  font-size: 50px;
-}
-.Section__update__old {
-  border: 2px solid #212529;
-  margin: 30px 0;
   font-size: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+.Section__update__word:hover {
+  color: #9ABF4B;
 }
 .Section__update__new {
-  border: 2px solid #212529;
+  width: 30vh;
   margin: 30px 0;
   font-size: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.Section__update__success {
-  border: 2px solid #212529;
-}
-#Section__update__input[list]
+.Section__update__new select, .Section__update__old input
 {
+  text-align: center;
   margin-left:auto;
   margin-right:auto;
   width: 85%;
   background: #E7F2BD;
   padding: 20px 20px 20px 20px;
-  font: 12px Arial, Helvetica, sans-serif;
+  font: 20px Arial, Helvetica, sans-serif;
+  border: 2px solid #9ABF4B;
   color: #666;
   border-radius: 10px;
 }
+
 .Section__update__success button {
+  border: 2px solid #9ABF4B;
   border-radius: 10px;
   width: 150px;
   height: 50px;
@@ -287,6 +227,7 @@ input[type=submit]{
   color: #fff;
 }
 .Section__update__home button {
+  border: 2px solid #9ABF4B;
   border-radius: 10px;
   width: 180px;
   height: 50px;
@@ -311,23 +252,20 @@ input[type=submit]{
 
 .Footer__corp {
   margin: 0 10px;
-  width: 500px;
-  border: 2px solid #212529;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .Footer__sns {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid #212529;
   left: 20px;
   padding: 10px;
 }
 
 .Footer__sns li {
   margin: 0 10px;
-  padding: 5px;
+  padding: 10px;
 }
 
 .Footer__menu {
@@ -341,20 +279,16 @@ input[type=submit]{
 
 .Footer__partner1 {
   justify-content: flex-end;
-  border: 2px solid #0B4514;
 }
 .Footer__partner2 {
-  border: 2px solid #0B4514;
   margin: 0 100px 0 0;
 }
 
 .Footer__partner1 img{
-  margin-top: 30px;
-  width: 350px;
+  width: 200px;
 }
 
 .Footer__partner2 img{
   margin-bottom: 10px;
   max-width: 80%;
-  width: 350px;
 }

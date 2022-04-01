@@ -88,4 +88,20 @@ public class PersonServiceImpl implements PersonService {
         return result;
     }
 
+    @Override
+    public void updateBenefit(Long personId, PersonDTO personDTO) {
+        Person person = personRepository.getById(personId);
+        person.setBenefit(personDTO.getBenefit());
+        
+        personRepository.save(person);
+    }
+
+    @Override
+    public void updateDonation(Long personId, PersonDTO personDTO) {
+        Person person = personRepository.getById(personId);
+        person.setDonation(personDTO.getDonation());
+        
+        personRepository.save(person);
+    }
+
 }

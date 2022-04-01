@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -41,21 +42,7 @@ public class PersonController {
 
         return personService.getOnePerson(personId);
     }
-<<<<<<< HEAD
-
-    // @GetMapping("/id")
-    // //PersonDTO
-    // public String getOnePerson(@RequestParam Long personId) {
-    //     if(personService.getOnePerson(personId)!=null) {
-    //         return "Loginafter.html";
-    //     }
-    //     return null;
-    //     // return personService.getOnePerson(personId);
-    // }
-
-=======
     
->>>>>>> e301f045abec0e63e591d53ba174c57f1ed8da44
     @GetMapping("/beneficiaries")
     public List<PersonDTO> getAllBeneficiaries() {
         return personService.getAllBeneficiaries();
@@ -71,10 +58,17 @@ public class PersonController {
         return personService.getAllPersonsWithTalent(talentId);
     }
 
-    //---------------------------
+    @PatchMapping("/benefit/{id}")
+    public void updateBenefit(@PathVariable(value="id") Long personId, @RequestBody PersonDTO personDTO) {
+        personService.updateBenefit(personId, personDTO);
+    }
 
-    // @PatchMapping("/benefit")
-    // public void updateBenefit(@Requst) {
-        
-    // }
+    @PatchMapping("/donation/{id}")
+    public void updateDonation(@PathVariable(value="id") Long personId, @RequestBody PersonDTO personDTO) {
+        personService.updateDonation(personId, personDTO);
+    }
+
+
+
+
 }

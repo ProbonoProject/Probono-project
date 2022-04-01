@@ -1,37 +1,3 @@
-table.tableTalent td:hover{
-  background: #E7F2BD;
-  border-radius: 2em;
-}
-
-table.tableTalent {
-  line-height: 1.5;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  border: 3px solid #5d7d1a;
-  margin: 20px 10px;
-  border-radius: 2em;
-}
-table.tableTalent thead th {
-  width: 150px;
-  padding: 10px;
-  font-weight: bold;
-  vertical-align: top;
-  color: #fff;
-  background: #9ABF4B;
-  border: 2px solid #5d7d1a;
-  margin: 20px 10px;
-  border-radius: 2em;
-}
-table.tableTalent tbody th {
-  width: 150px;
-  padding: 10px;
-}
-table.tableTalent td {
-  width: 350px;
-  padding: 10px;
-  vertical-align: top;
-}
-
 /* reset.css */
 textarea::-webkit-placeholder {
   font-size: 70%;
@@ -170,6 +136,28 @@ list-style: none;
 text-align: center;
 width:200px;
 }
+.BookMark ul {
+padding-left: 0px;
+}
+.BookMark li {
+font-size: small;
+padding : 0px;
+padding-bottom: 10px;
+list-style: none;
+text-align: center;
+width:120px;
+}
+.MyMatch li {
+font-size: small;
+padding-bottom: 10px;
+list-style: none;
+text-align: center;
+width:120px;
+margin-right: 10px;
+}
+.MyMatch ul {
+padding-right: 20px;
+}
 .Login {
 left:5rem;
 position:relative;
@@ -225,132 +213,142 @@ float: right;
 
 
 /* Section */
-.Section__search {
-  text-align: center;
-  height: 10%;
-  width: 85%;
+.boxes {
   display: flex;
+  /* flex-direction: column; */
   justify-content: center;
-  margin: 50px;
-  border-radius: 10px;
-  border: 2px solid #9ABF4B;
+  align-items: center;
+  
 }
-.Section__search select {
-  font-family: 'Nanum Gothic', 'sans-serif';
-  font-weight: 700;
-  -o-appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+.box {
+  margin: 90px;
+}
 
-    background: #E7F2BD;
-    font-size: large;
-    width: inherit;
-    height: inherit;
-    border: 0 none;
-    outline: 0 none;
-    padding: 30px 30px;
-    position: relative;
-    border-radius: 8px;
-    z-index: 3;
-}
-.Section__search select option {
-  background: #E7F2BD;
+.card {
+  width: 400px;
+  height: 500px;
+  margin: 150px auto 0;
+  background-color: #abbf60;
+  box-shadow: 0 10px 90px #00000024;
   text-align: center;
-  color: black;
-  padding: 0;
+  font-size: 20px;
+  border-radius: 15px;
 }
-/* button */
-#Section__search__btn {
-  flex: 1 1 auto;
-  padding: 30px 20px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
- }
-#Section__search__btn:hover {
-  background-position: right center; /* change the direction of the change here */
-}
-.btn-3 {
-  background-image: linear-gradient(to right, #84FAB0 0%, #8FD3F4 51%, #84FAB0 100%);
-}
-/* Section - slider */
-.Section__slider {
-  object-fit: cover;
-  height: 60%;
-  width: 90%;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-}
-.Section__slider img {
-  width: 60%;
-  height: 60%;
-  border-radius: 50px;
-}
-.Section__slider i {
-  width: 5%;
-  height: 10%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #abbf60;
-  margin: 0 40px;
-}
-/* Section - crowdFundings */
-.Section__crowdFundings {
-  height: 30%;
-  width: 90%;
-}
-@import url('https://fonts.googleapis.com/css?family=Bad+Script%7CBellefair%7CComfortaa%7CSatisfy%7CSlabo+27px%7CVidaloka');
-#Section__crowdFundings__container {
-  width: 30%;
-  max-width: 500px;
-  height: 100%;
-  margin: 5em auto;
-  overflow: hidden;
-  border: 10px solid #E7F2BD;
-  border-radius: 10px;
+
+.card .card-header {
   position: relative;
+  height: 48px;
 }
-#Section__crowdFundings__container img {
-  width: 100%;
-  height: 100%;
-  margin-bottom: -5px;
-  transition: all 0.3s ease-out;
-  position: relative;
-  z-index: 2;
-}
-#Section__crowdFundings__container:hover img {
-  transform: scale(1.2, 1.2);
-  z-index: 9;
-}
-.box-text {
-  width: 100%;
-  height: 100%;
+
+.card .card-header .profile-img {
+  width: 230px;
+  height: 230px;
+  border-radius: 1000px;
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 3;
-  padding: 10px;
-  background-image: linear-gradient(135deg, #e7f2bd 10%, rgba(240, 103, 180, 0.65) 100%);
-  opacity: 1;
-  transition: 0.3s linear;
-  color: #0B4514;
-  text-shadow: 2px 2px 2px #fff;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 8px solid #e7f2bd;
+  box-shadow: 0 0 20px #00000033;
+  background-color: #ffffff;
 }
-.box-text h1 {
-  font-size: 2.2em;
+
+.card .card-header .profile-img:hover {
+  width: 270px;
+  height: 270px;
+  border: 8px solid black;
 }
-.box-text p {font-size: 1.5em;}
-.box-text:hover{opacity: 0;}
-.Section__crowdFundings {
+
+.card .card-body {
+  margin-top: 70px;
+  padding: 10px 40px;
+}
+
+.card .card-body .name {
+  margin-top: 30px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #e7f2bd;
+}
+
+.card .card-body .name:hover {
+  margin-top: 30px;
+  font-size: 45px;
+  color: black;
+}
+
+.card .card-body .mail {
+  font-size: 25px;
+  color: #f2f2f2;
+}
+
+.card .card-body .mail:hover {
+  font-size: 28px;
+  color: black;
+}
+
+.card .card-body .job {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.card .social-links {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.card .social-links .social-icon {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  height: 40px;
+  width: 40px;
+  background-color: black;
+  color: #ffffff;
+  font-size: 20px;
+  border-radius: 100%;
+  text-decoration: none;
+  margin: 0 13px 30px 0;
 }
+
+.card .social-links .social-icon:last-child {
+  margin-right: 0;
+}
+
+.card .social-links .social-icon:hover {
+  background-color: #ffffff;
+  color: black;
+  height: 50px;
+  width: 50px;
+  text-decoration: none;
+}
+
+
+.card .card-footer {
+  background-color: #abbf60;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 20px 0 20px 0;
+}
+
+.card .card-footer .count {
+  font-size: 14px;
+}
+
+
+
+@media screen and (max-width: 575px) {
+  .card {
+      width: 96%;
+  }
+
+  .card .card-body {
+      padding: 10px 20px;
+  }
+}
+
+
 
 /* Footer */
 .Footer {
@@ -362,7 +360,8 @@ float: right;
 
 .Footer__corp {
   margin: 0 10px;
-  font-size: 20px;
+  width: 500px;
+  font-size: 30px;
 }
 
 .Footer__sns {
@@ -375,7 +374,7 @@ float: right;
 
 .Footer__sns li {
   margin: 0 10px;
-  padding: 10px;
+  padding: 5px;
 }
 
 .Footer__menu {
@@ -395,10 +394,12 @@ float: right;
 }
 
 .Footer__partner1 img{
-  width: 200px;
+  margin-top: 30px;
+  width: 350px;
 }
 
 .Footer__partner2 img{
   margin-bottom: 10px;
   max-width: 80%;
+  width: 350px;
 }

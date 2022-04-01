@@ -11,5 +11,7 @@ public interface PersonService {
     List<PersonDTO> getAllDonators();
     PersonDTO getOnePerson(Long personId);
     List<PersonDTO> getAllPersonsWithTalent(Long talentId);
+    void updateBenefit(Long personId, PersonDTO personDTO);
+    void updateDonation(Long personId, PersonDTO personDTO);
     
 }
