@@ -32,7 +32,7 @@
 ## 🖥실제 화면
 
 ## 🎯트러블 슈팅
-<a href="www.naver.com"><img src="https://img.shields.io/badge/more about functions-D9B68B?style=for-the-badge&logoWidth=50"/></a>
+<a href="https://github.com/ProbonoProject/Probono-project/wiki/Trouble-Shooting"><img src="https://img.shields.io/badge/more about functions-D9B68B?style=for-the-badge&logoWidth=50"/></a>
 
 ## 🧐개선 사항
 
