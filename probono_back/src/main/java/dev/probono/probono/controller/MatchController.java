@@ -1,13 +1,12 @@
 package dev.probono.probono.controller;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import dev.probono.probono.model.dto.MatchDTO;
 import dev.probono.probono.service.MatchService;
+import dev.probono.probono.model.dto.MatchDTO;
 
 @CrossOrigin(origins = "*")
 @RestController
@@ -20,10 +19,10 @@ public class MatchController {
         this.matchService = matchService;
     }
 
-    
     @PostMapping()
     public void insertMatch(@RequestBody MatchDTO matchDTO) {
         System.out.println(matchDTO);
         matchService.insertMatch(matchDTO);
     }
+    
 }

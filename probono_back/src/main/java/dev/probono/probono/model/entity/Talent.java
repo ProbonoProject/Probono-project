@@ -1,10 +1,10 @@
 package dev.probono.probono.model.entity;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Column;
+import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
 @Entity
 public class Talent {
@@ -18,10 +18,6 @@ public class Talent {
 
     public Talent() {}
 
-    public Talent(String talentType) {
-        this.talentType = talentType;
-    }
-
     public Long getId() {
         return id;
     }
@@ -33,11 +29,8 @@ public class Talent {
     public String getTalentType() {
         return talentType;
     }
-
     public void setTalentType(String talentType) {
         this.talentType = talentType;
     }
     
-    
-
 }

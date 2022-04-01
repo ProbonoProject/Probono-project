@@ -6,9 +6,8 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import dev.probono.probono.model.dto.TalentDTO;
 import dev.probono.probono.service.TalentService;
+import dev.probono.probono.model.dto.TalentDTO;
 
 @CrossOrigin(origins = "*")
 @RestController
@@ -25,4 +24,5 @@ public class TalentController {
     public List<TalentDTO> getAllTalents() {
         return talentService.getAllTalents();
     }
+    
 }

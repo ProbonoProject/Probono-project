@@ -1,13 +1,13 @@
 package dev.probono.probono.model.entity;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
+import javax.persistence.Column;
 import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.JoinColumn;
 
 @Entity
 @Table(name = "MATCHING")
@@ -18,16 +18,13 @@ public class Match {
     @Column(name = "MATCHING_ID")
     private Long id;
 
-    
     @ManyToOne
     @JoinColumn(name = "BENEFICIARY_ID")
     private Person beneficiary;
-    // private Long beneficiaryId;
 
     @ManyToOne
     @JoinColumn(name = "DONATOR_ID")
     private Person donator;
-    // private Long donatorId;
 
     @ManyToOne
     @JoinColumn(name = "TALENT_ID")
@@ -67,6 +64,4 @@ public class Match {
         this.talent = talent;
     }
 
-    
-    
 }

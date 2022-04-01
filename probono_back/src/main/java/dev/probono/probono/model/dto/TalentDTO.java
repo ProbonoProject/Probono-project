@@ -30,5 +30,4 @@ public class TalentDTO {
         this.talentType = talentType;
     }
 
-    
 }

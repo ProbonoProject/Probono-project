@@ -23,4 +23,5 @@ public class TalentServiceImpl implements TalentService {
         
         return result;
     }
+
 }

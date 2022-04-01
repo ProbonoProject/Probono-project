@@ -1,18 +1,18 @@
 package dev.probono.probono.service;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
-import javax.persistence.EntityNotFoundException;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import dev.probono.probono.model.entity.Person;
-import dev.probono.probono.model.entity.Talent;
-import dev.probono.probono.model.dto.PersonDTO;
+import org.springframework.beans.factory.annotation.Autowired;
 import dev.probono.probono.repository.PersonRepository;
 import dev.probono.probono.repository.TalentRepository;
+import dev.probono.probono.model.entity.Person;
+import dev.probono.probono.model.dto.PersonDTO;
+import dev.probono.probono.model.entity.Talent;
+import java.util.List;
+import java.util.stream.Collectors;
+import javax.persistence.EntityNotFoundException;
+
+
+
 
 @Service
 public class PersonServiceImpl implements PersonService {
@@ -26,6 +26,7 @@ public class PersonServiceImpl implements PersonService {
     @Override
     public void insertPerson(PersonDTO personDTO) {
         Person person = new Person();
+        
         person.setName(personDTO.getName());
         person.setEmail(personDTO.getEmail());
         person.setBenefit(personDTO.getBenefit());
@@ -42,10 +43,8 @@ public class PersonServiceImpl implements PersonService {
         return result;
     }
 
-
     @Override
     public PersonDTO getOnePerson(Long personId) {
-
         try{
             Person person = personRepository.getById(personId);
             PersonDTO result = new PersonDTO(person);
@@ -53,10 +52,9 @@ public class PersonServiceImpl implements PersonService {
             return result;
         } catch(EntityNotFoundException e) {
             e.printStackTrace();
-            System.out.println("올바른 아이디를 입력하세요.");
+
             return null;
         }
-        
     }
 
     @Override
@@ -88,7 +86,7 @@ public class PersonServiceImpl implements PersonService {
     public void updateBenefit(Long personId, PersonDTO personDTO) {
         Person person = personRepository.getById(personId);
         person.setBenefit(personDTO.getBenefit());
-        
+
         personRepository.save(person);
     }
 
