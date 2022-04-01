@@ -3,10 +3,10 @@
 # ✨ Probono-project
 
 ## 팀원 구성
-- 🙄 [김병조] (https://github.com/KIMBJ1)
-- 😁 [임동규] (https://github.com/dongkyuu)
-- 😶 [장수진] (https://github.com/suziinee)
-- 😀 [홍도희] (https://github.com/dohee789)
+- 🙄 [김병조](https://github.com/KIMBJ1)
+- 😁 [임동규](https://github.com/dongkyuu)
+- 😶 [장수진](https://github.com/suziinee)
+- 😀 [홍도희](https://github.com/dohee789)
 
 ## 🎈 서비스 소개
 - 🚀재능 기부 수혜 구성
