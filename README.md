@@ -32,7 +32,7 @@
 ## 🖥실제 화면
 
 # 🎃 이슈
-<a href="https://github.com/ProbonoProject/Probono-project/issues"><img src="https://img.shields.io/badge/more about functions-D9B68B?style=for-the-badge&logoWidth=50"/></a>
+<a href="https://github.com/ProbonoProject/Probono-project/issues"><img src="https://img.shields.io/badge/CLICK ME - issues-D9B68B?style=for-the-badge&logoWidth=50"/></a>
 
 ## 🎯트러블 슈팅
 
