@@ -1,4 +1,4 @@
-🚗😜🎃�
+🚗😜�
 
 # ✨ Probono-project
 
@@ -31,8 +31,17 @@
 
 ## 🖥실제 화면
 
+# 🎃 이슈
+<a href="https://github.com/ProbonoProject/Probono-project/issues"><img src="https://img.shields.io/badge/more about functions-D9B68B?style=for-the-badge&logoWidth=50"/></a>
+
 ## 🎯트러블 슈팅
-<a href="https://github.com/ProbonoProject/Probono-project/wiki/Trouble-Shooting"><img src="https://img.shields.io/badge/more about functions-D9B68B?style=for-the-badge&logoWidth=50"/></a>
+
+### front end
+- asdf
+
+### back end
+- asdf
+
 
 ## 🧐개선 사항
 
