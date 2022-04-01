@@ -36,6 +36,10 @@
 ## 🖥실제 화면
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/57746855/161205648-18c771d0-6238-4f9f-8399-66b98d9486f7.gif)
 
+## 👕Light house
+![lighthouse](https://user-images.githubusercontent.com/57746855/161215192-708cece4-ecc1-4d0c-892c-878d1a9322e6.png)
+
+
 # 💢 이슈 / 🎯트러블 슈팅
 <a href="https://github.com/ProbonoProject/Probono-project/issues?q=is%3Aissue+is%3Aclosed"><img src="https://img.shields.io/badge/click me - CLOSE issues-D9B68B?style=for-the-badge&logoWidth=50"/></a>
 
